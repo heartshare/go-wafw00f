@@ -5,7 +5,6 @@
 - WAFW00F是一款优秀的web应用防火墙识别开源工具：https://github.com/EnableSecurity/wafw00f
 - 使用Golang重写的原因：Python环境配置不便利，Golang打包生成可执行文件直接运行
 - 目前还在开发阶段，规则解析存在小问题，考虑加入协程提高执行效率
-- 项目显示由Python编写其实是因为直接复制了数量较大的py规则库，使用golang正则解析
 
 ## 快速开始
 
