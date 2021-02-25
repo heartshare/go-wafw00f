@@ -29,9 +29,11 @@ func ResolveWafLib() model.Waf {
 		return ret
 	} else {
 		filenames, _ := util.GetAllFile("./waf/lib")
-		for _, filename := range filenames {
-			content, _ := ioutil.ReadFile(filename)
-			doParse(string(content))
+		for _, v := range filenames {
+			content, _ := ioutil.ReadFile(v)
+			if strings.HasSuffix(v, ".lib") {
+				doParse(string(content))
+			}
 		}
 		data, _ := json.Marshal(Waf)
 		log.Info("Create WAF Json File")
